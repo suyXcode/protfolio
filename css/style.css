@@ -1,0 +1,177 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Background */
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f1f1f1;
+    scroll-behavior: smooth;
+    min-height: 100vh;
+    animation: bgShift 30s infinite alternate;
+  }
+  
+  @keyframes bgShift {
+    0% { background-position: left; }
+    100% { background-position: right; }
+  }
+  
+  /* Wrapper */
+  .wrapper {
+    padding: 2rem;
+    max-width: 960px;
+    margin: auto;
+  }
+  
+  /* Header */
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeIn 1.5s ease;
+  }
+  
+  .glow {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+  }
+  
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid #00f0ff;
+    margin-top: 1rem;
+    box-shadow: 0 0 20px #00f0ff;
+  }
+  
+  /* Navigation */
+  nav {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  nav a::after {
+    content: '';
+    height: 2px;
+    width: 0%;
+    background: #00f0ff;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+  /* Sections */
+  .card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+    backdrop-filter: blur(8px);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Skills Grid */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 1rem;
+  }
+  
+  .skills-grid span {
+    background: #00f0ff25;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s ease;
+  }
+  
+  .skills-grid span:hover {
+    background: #00f0ff50;
+    transform: scale(1.05);
+  }
+  
+  /* Projects */
+  .project {
+    background: #1c2b36;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .project:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Neon Button */
+  .neon-button {
+    margin-top: 1rem;
+    padding: 12px 24px;
+    background: transparent;
+    color: #00f0ff;
+    border: 2px solid #00f0ff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px #00f0ff, 0 0 40px #00f0ff33, 0 0 80px #00f0ff33;
+  }
+  
+  .neon-button:hover {
+    background: #00f0ff;
+    color: #000;
+    box-shadow: 0 0 20px #00f0ff, 0 0 60px #00f0ff;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    color: #aaa;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+  }
+  
+  /* Fade In Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    nav a {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .skills-grid {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+  }
+  
